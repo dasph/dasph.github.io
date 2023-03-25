@@ -15,6 +15,7 @@ export const App: Component<{ path?: string }> = (path) => {
     <div class={ theme() === Theme.DARK ? 'theme-dark' : undefined }>
       <header>
         <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" />
         <button onClick={() => setTheme(theme() === Theme.DARK ? Theme.LIGHT : Theme.DARK)}>
           theme|
         </button>
