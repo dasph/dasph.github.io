@@ -31,4 +31,4 @@ routes
   .map(({ path, page }) => ({ path, page: index.replace('<!--app-->', page) }))
   .map(({ path, page }) => createPage(path, page))
 
-  unlink(entry, () => console.log(`✓ removed entry: ${entry}`))
+unlink(entry, () => console.log(`✓ removed entry: ${entry}`))
