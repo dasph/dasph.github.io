@@ -1,5 +1,5 @@
 import { resolve } from 'node:path';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, unlink, writeFileSync } from 'node:fs';
 import { renderToString, generateHydrationScript as hydration } from 'solid-js/web';
 
 import { App } from './App'
@@ -23,9 +23,12 @@ const createPage = (path: string, page: string) => {
   console.log(`✓ created page: ${file}`);
 }
 
-const index = readFileSync('./dist/client/app.html', 'utf-8').replace('<!--hydration-->', hydration())
+const entry = './dist/client/entry.html';
+const index = readFileSync(entry, 'utf-8').replace('<!--hydration-->', hydration())
 
 routes
   .map(({ path }) => ({ path, page: renderToString(() => <App path={path} />) }))
   .map(({ path, page }) => ({ path, page: index.replace('<!--app-->', page) }))
   .map(({ path, page }) => createPage(path, page))
+
+  unlink(entry, () => console.log(`✓ removed entry: ${entry}`))

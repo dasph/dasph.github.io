@@ -18,6 +18,6 @@ export const entry = (index: string): Plugin => {
 
     configureServer: (server) => nextTick(() => server.middlewares.stack.splice(-2, 0, { route: '', handle })),
 
-    generateBundle: (_opts, bundle) => Object.values(bundle).filter(({ name }) => !name).forEach((chunk) => chunk.fileName = 'app.html')
+    generateBundle: (_opts, bundle) => Object.values(bundle).filter(({ name }) => !name).forEach((chunk) => chunk.fileName = 'entry.html')
   }
 }
