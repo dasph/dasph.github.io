@@ -1,0 +1,24 @@
+{
+  "name": "homepage",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Andrew's personal homepage",
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite preview --outDir ./docs/client",
+    "build:client": "vite build -m client",
+    "build:server": "vite build -m server",
+    "generate": "pnpm build:client && pnpm build:server && node ./docs/server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@solidjs/router": "^0.8.1",
+    "solid-js": "^1.6.10"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vite-plugin-solid": "^2.5.0"
+  }
+}
