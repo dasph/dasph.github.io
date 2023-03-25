@@ -17,7 +17,7 @@ const common: UserConfigExport = {
 const client: UserConfigExport = {
   build: {
     target: 'esnext',
-    outDir: './docs/client'
+    outDir: './dist/client'
   },
   server: {
     port: 3000,
@@ -29,7 +29,7 @@ const client: UserConfigExport = {
 const server: UserConfigExport = {
   build: {
     ssr: true,
-    outDir: './docs/server',
+    outDir: './dist/server',
     rollupOptions: {
       input: {
         index: './src/server.tsx'
