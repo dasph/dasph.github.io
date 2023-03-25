@@ -19,6 +19,9 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Configuration ⚙️
+        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+
       - name: Install 🔧
         run: pnpm install --frozen-lockfile
 
