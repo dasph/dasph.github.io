@@ -25,6 +25,8 @@ const createPage = (path: string, page: string) => {
 
 const index = readFileSync('./dist/client/app.html', 'utf-8').replace('<!--hydration-->', hydration())
 
+console.log()
+
 routes
   .map(({ path }) => ({ path, page: renderToString(() => <App path={path} />) }))
   .map(({ path, page }) => ({ path, page: index.replace('<!--app-->', page) }))
