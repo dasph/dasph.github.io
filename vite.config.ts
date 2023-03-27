@@ -6,9 +6,13 @@ import { entry } from './src/plugins';
 const common: UserConfigExport = {
   resolve: {
     alias: {
+      '@app': '/src/app',
       '@hooks': '/src/hooks',
       '@types': '/src/types',
-      '@assets': '/src/assets'
+      '@views': '/src/views',
+      '@assets': '/src/assets',
+      '@layouts': '/src/layouts',
+      '@components': '/src/components'
     }
   },
   plugins: [solid({ ssr: true })]

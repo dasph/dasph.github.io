@@ -12,9 +12,13 @@
     "noEmit": true,
     "isolatedModules": true,
     "paths": {
+      "@app": ["./src/app"],
       "@hooks": ["./src/hooks"],
       "@types": ["./src/types"],
-      "@assets": ["./src/assets"]
+      "@views": ["./src/views"],
+      "@assets": ["./src/assets"],
+      "@layouts": ["./src/layouts"],
+      "@components": ["./src/components"]
     }
   }
 }
