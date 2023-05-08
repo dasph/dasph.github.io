@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    padding: 1.5em 2em;
+  }
+
+  aside {
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+    }
+  }
+}
