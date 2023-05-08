@@ -1,0 +1,15 @@
+div {
+  flex-grow: 1;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #101010;
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+}

@@ -2,8 +2,7 @@ import { resolve } from 'node:path';
 import { mkdirSync, readFileSync, unlink, writeFileSync } from 'node:fs';
 import { renderToString, generateHydrationScript as hydration } from 'solid-js/web';
 
-import { App } from './App'
-import { routes } from './router'
+import { App, routes } from '@app';
 
 const parsePath = (path: string) => {
   const entries = path.split('/')
