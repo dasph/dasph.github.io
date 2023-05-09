@@ -10,8 +10,8 @@ export const Header: Component = () => (
     <A href='/'>{Author}</A>
 
     <aside>
-      <A href={Links.BLOG}>{'blog'}</A>
-      <A href={Links.RESUME}>{'resume'}</A>
+      <a target='_blank' rel='noopener' href={Links.BLOG}>{'blog'}</a>
+      <a target='_blank' rel='noopener' href={Links.RESUME}>{'resume'}</a>
     </aside>
   </header>
 )
