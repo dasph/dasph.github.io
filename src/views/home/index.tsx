@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js';
 
 import { Default } from '@layouts';
-import { Header, User } from '@components';
+import { Footer, Header, User } from '@components';
 
 import styles from './.module.scss';
 
@@ -10,6 +10,7 @@ export const Home: Component = () => {
     <Default>
       <Header />
       <User className={styles.user} />
+      <Footer />
     </Default>
   );
 };
