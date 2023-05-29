@@ -5,5 +5,5 @@ export enum Links {
   EMAIL = 'bWFpbHRvOmFuZHJld0Bhd2t3cmQuZGV2',
   GITHUB = 'https://ln.awkwrd.dev/~gh',
   LINKEDIN = 'https://ln.awkwrd.dev/~in',
-  RESUME_PATH = '~cv'
+  RESUME = 'https://ln.awkwrd.dev/~cv'
 }

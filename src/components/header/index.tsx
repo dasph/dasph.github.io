@@ -11,7 +11,7 @@ export const Header: Component = () => (
 
     <aside>
       <a target='_blank' rel='noopener' href={Links.BLOG}>{'blog'}</a>
-      <a target='_blank' rel='noopener' href={`//cv.${location.hostname}/${Links.RESUME_PATH}`}>{'resume'}</a>
+      <a target='_blank' rel='noopener' href={Links.RESUME}>{'resume'}</a>
     </aside>
   </header>
 )
