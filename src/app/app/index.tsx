@@ -1,5 +1,5 @@
 import type { Component } from 'solid-js';
-import { Router, useRoutes } from '@solidjs/router';
+import { Router } from '@solidjs/router';
 
 import { routes } from '@app';
 
@@ -11,6 +11,6 @@ type Props = {
 
 export const App: Component<Props> = ({ path }) => {
   return (
-    <Router url={path} children={useRoutes(routes)} />
+    <Router url={path} children={routes} />
   );
 };

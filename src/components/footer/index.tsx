@@ -7,7 +7,7 @@ import styles from './.module.scss';
 export const Footer: VoidComponent = () => (
   <footer class={styles.footer}>
     <div>
-      <span>{`© 2023 ${Author}`}</span>
+      <span>{`© 2024 ${Author}`}</span>
       <span>{'Powered by SolidJS & ❤️'}</span>
     </div>
   </footer>
