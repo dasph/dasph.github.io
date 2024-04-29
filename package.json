@@ -13,8 +13,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@solidjs/router": "^0.10.9",
-    "solid-js": "^1.8.11"
+    "@solidjs/router": "^0.10.10",
+    "solid-js": "^1.8.17"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
