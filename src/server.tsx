@@ -1,6 +1,7 @@
 import { resolve } from 'node:path';
+import type { ManifestChunk } from 'vite';
 import { mkdirSync, readFileSync, unlink, writeFileSync } from 'node:fs';
-import { renderToString, generateHydrationScript as hydration } from 'solid-js/web';
+import { generateHydrationScript as hydration, renderToStringAsync } from 'solid-js/web';
 
 import { App, routes } from '@app';
 
@@ -22,12 +23,28 @@ const createPage = (path: string, page: string) => {
   console.log(`✓ created page: ${file}`);
 }
 
+const renderAssets = (chunk?: ManifestChunk): string => [
+  chunk?.file && `<script type="module" crossorigin src="/${chunk.file}"></script>`,
+  chunk?.css?.map((file) => `<link rel="stylesheet" crossorigin href="/${file}">`)
+].flat().filter(Boolean).join('\n    ');
+
 const entry = './dist/client/entry.html';
-const index = readFileSync(entry, 'utf-8').replace('<!--hydration-->', hydration())
+const manifestName = './dist/client/.vite/manifest.json';
 
-routes
-  .map(({ path }) => ({ path, page: renderToString(() => <App path={path} />) }))
-  .map(({ path, page }) => ({ path, page: index.replace('<!--app-->', page) }))
-  .map(({ path, page }) => createPage(path, page))
+const index = readFileSync(entry, 'utf-8').replace('<!--hydration-->', hydration());
+const manifest: [string, ManifestChunk][] = Object.entries(JSON.parse(readFileSync(manifestName, 'utf-8')));
 
-unlink(entry, () => console.log(`✓ removed entry: ${entry}`))
+(async () => {
+  const pages = await Promise.all(routes.map(async ({ path, component }) => {
+    const page = await renderToStringAsync(() => <App path={path} />);
+    const assets = renderAssets(manifest.find(([module]) => module.endsWith(component.module))?.[1]);
+
+    return { path, page, assets };
+  }));
+
+  pages
+    .map(({ assets, path, page }) => ({ assets, path, page: index.replace('<!--app-->', page).replace('<!--assets-->', assets) }))
+    .map(({ path, page }) => path && createPage(path, page));
+
+  unlink(entry, () => console.log(`✓ removed entry: ${entry}`));
+})();
