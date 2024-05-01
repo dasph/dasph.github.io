@@ -1,6 +1,7 @@
 import type { VoidComponent } from 'solid-js';
 
-import { Author } from '@types';
+import { Proton } from '@assets';
+import { Author, Links } from '@types';
 
 import styles from './.module.scss';
 
@@ -10,5 +11,6 @@ export const Footer: VoidComponent = () => (
       <span>{`© 2024 ${Author}`}</span>
       <span>{'Powered by SolidJS & ❤️'}</span>
     </div>
+    <a target='_blank' rel='noopener' aria-label='Proton' href={Links.PROTON}><Proton height='10' /></a>
   </footer>
 )

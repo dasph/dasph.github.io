@@ -1,6 +1,7 @@
 export const Author = 'Andrew Nyzhnyk';
 
 export enum Links {
+  PROTON = 'https://proton.me',
   BLOG = 'https://ln.awkwrd.dev/~md',
   EMAIL = 'bWFpbHRvOmFuZHJld0Bhd2t3cmQuZGV2',
   GITHUB = 'https://ln.awkwrd.dev/~gh',
