@@ -1,1 +1,0 @@
-import{g as t,e as n,f as a,t as o}from"./index-Yuu6bTSW.js";const r={"not-found":"_not-found_1gnwj_1"};var s=o("<div>404");const f=()=>(()=>{var e=t(s);return n(()=>a(e,r.notFound)),e})();export{f as default};
