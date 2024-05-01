@@ -1,0 +1,60 @@
+{
+  "src/assets/favicon.ico": {
+    "file": "assets/favicon-zUJv736M.ico",
+    "src": "src/assets/favicon.ico"
+  },
+  "src/assets/favicon.svg": {
+    "file": "assets/favicon-hpL_4Xt6.svg",
+    "src": "src/assets/favicon.svg"
+  },
+  "src/assets/images/avatar/avatar.avif": {
+    "file": "assets/avatar-nPV1aX6x.avif",
+    "src": "src/assets/images/avatar/avatar.avif"
+  },
+  "src/assets/images/avatar/avatar.jpg": {
+    "file": "assets/avatar-CNRuNJ03.jpg",
+    "src": "src/assets/images/avatar/avatar.jpg"
+  },
+  "src/assets/index.html": {
+    "assets": [
+      "assets/favicon-zUJv736M.ico",
+      "assets/favicon-hpL_4Xt6.svg"
+    ],
+    "css": [
+      "assets/index-8Vwxnr7A.css"
+    ],
+    "dynamicImports": [
+      "src/views/home/index.tsx",
+      "src/views/not-found/index.tsx"
+    ],
+    "file": "assets/index-Yuu6bTSW.js",
+    "isEntry": true,
+    "src": "src/assets/index.html"
+  },
+  "src/views/home/index.tsx": {
+    "assets": [
+      "assets/avatar-CNRuNJ03.jpg",
+      "assets/avatar-nPV1aX6x.avif"
+    ],
+    "css": [
+      "assets/index-BsZodLf2.css"
+    ],
+    "file": "assets/index-_SQKN-Tl.js",
+    "imports": [
+      "src/assets/index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/home/index.tsx"
+  },
+  "src/views/not-found/index.tsx": {
+    "css": [
+      "assets/index-nLl5ly3i.css"
+    ],
+    "file": "assets/index-mO8m3jUw.js",
+    "imports": [
+      "src/assets/index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/not-found/index.tsx"
+  }
+}
