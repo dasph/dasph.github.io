@@ -27,7 +27,7 @@
       "src/views/home/index.tsx",
       "src/views/not-found/index.tsx"
     ],
-    "file": "assets/index-wUhmd9r4.js",
+    "file": "assets/index-G8NbaXl5.js",
     "isEntry": true,
     "src": "src/assets/index.html"
   },
@@ -39,7 +39,7 @@
     "css": [
       "assets/index-yOOqKFBH.css"
     ],
-    "file": "assets/index-dqeHD4CH.js",
+    "file": "assets/index-QCn8sUB8.js",
     "imports": [
       "src/assets/index.html"
     ],
@@ -50,7 +50,7 @@
     "css": [
       "assets/index-nLl5ly3i.css"
     ],
-    "file": "assets/index-ItO-F9gw.js",
+    "file": "assets/index-vkNA6FkF.js",
     "imports": [
       "src/assets/index.html"
     ],
